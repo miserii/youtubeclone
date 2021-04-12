@@ -13,6 +13,8 @@
 		C50FEF5E260E4A8C0033E0E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50FEF5C260E4A8C0033E0E7 /* Main.storyboard */; };
 		C50FEF60260E4A8D0033E0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50FEF5F260E4A8D0033E0E7 /* Assets.xcassets */; };
 		C50FEF63260E4A8D0033E0E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50FEF61260E4A8D0033E0E7 /* LaunchScreen.storyboard */; };
+		C5C774BE261F4DF8007D1281 /* VideoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C774BD261F4DF8007D1281 /* VideoListCollectionViewCell.swift */; };
+		C5C774C226204FF1007D1281 /* VideoListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C774C126204FF1007D1281 /* VideoListCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C50FEF5F260E4A8D0033E0E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50FEF62260E4A8D0033E0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C50FEF64260E4A8D0033E0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5C774BD261F4DF8007D1281 /* VideoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5C774C126204FF1007D1281 /* VideoListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 				C50FEF6B260E4AC60033E0E7 /* App */,
 				C50FEF5A260E4A8C0033E0E7 /* ViewController.swift */,
 				C50FEF5C260E4A8C0033E0E7 /* Main.storyboard */,
+				C5C774C026204FDA007D1281 /* Cell */,
 				C50FEF5F260E4A8D0033E0E7 /* Assets.xcassets */,
 				C50FEF61260E4A8D0033E0E7 /* LaunchScreen.storyboard */,
 				C50FEF64260E4A8D0033E0E7 /* Info.plist */,
@@ -73,6 +78,15 @@
 				C50FEF58260E4A8C0033E0E7 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		C5C774C026204FDA007D1281 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C5C774BD261F4DF8007D1281 /* VideoListCollectionViewCell.swift */,
+				C5C774C126204FF1007D1281 /* VideoListCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +148,7 @@
 			files = (
 				C50FEF63260E4A8D0033E0E7 /* LaunchScreen.storyboard in Resources */,
 				C50FEF60260E4A8D0033E0E7 /* Assets.xcassets in Resources */,
+				C5C774C226204FF1007D1281 /* VideoListCollectionViewCell.xib in Resources */,
 				C50FEF5E260E4A8C0033E0E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +162,7 @@
 			files = (
 				C50FEF5B260E4A8C0033E0E7 /* ViewController.swift in Sources */,
 				C50FEF57260E4A8C0033E0E7 /* AppDelegate.swift in Sources */,
+				C5C774BE261F4DF8007D1281 /* VideoListCollectionViewCell.swift in Sources */,
 				C50FEF59260E4A8C0033E0E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

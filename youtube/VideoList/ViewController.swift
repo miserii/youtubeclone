@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -22,6 +23,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        fetchListAPI()
+    }
+
+    private func fetchListAPI() {
+        let urlString = "https://www.googleapis.com/youtube/v3/search?q=bts&key=AIzaSyD_gE7FdzyhVY9jzPIHA3BqivdtltPbDSw&part=snippet"
+        let request = AF.request(urlString)
+
+        request.responseJSON { (response) in
+            do {
+                guard let data = response.data else { return }
+                let decode = JSONDecoder()
+                let video = try decode.decode(VideoModel.self, from: data)
+                print("video👉: ", video.items.count)
+            } catch {
+                print("変換に失敗🥺: ", error)
+            }
+        }
     }
 
 }
@@ -45,6 +63,5 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
         return cell
     }
-
 
 }

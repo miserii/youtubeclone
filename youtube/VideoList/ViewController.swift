@@ -11,6 +11,7 @@ import Alamofire
 class ViewController: UIViewController {
 
     private let cellId = "Cell"
+    private var videoItems = [Item]()
 
     @IBOutlet private weak var videoListCollectionView: UICollectionView! {
         didSet {
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
                 guard let data = response.data else { return }
                 let decode = JSONDecoder()
                 let video = try decode.decode(VideoModel.self, from: data)
-                print("video👉: ", video.items.count)
+                self.videoItems = video.items
             } catch {
                 print("変換に失敗🥺: ", error)
             }

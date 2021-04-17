@@ -7,14 +7,18 @@
 
 import Foundation
 
-struct VideoModel: Decodable {
+struct Video: Decodable {
 
     let kind: String
     let items: [Item]
+
 }
 
 struct Item: Decodable {
+
+    var channel: Channel?
     let snippet: Snippet
+
 }
 
 struct Snippet: Decodable {

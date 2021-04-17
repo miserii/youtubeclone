@@ -16,7 +16,9 @@
 		C5C774BE261F4DF8007D1281 /* VideoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C774BD261F4DF8007D1281 /* VideoListCollectionViewCell.swift */; };
 		C5C774C226204FF1007D1281 /* VideoListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C774C126204FF1007D1281 /* VideoListCollectionViewCell.xib */; };
 		C5C774E72624C0E0007D1281 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C5C774E62624C0E0007D1281 /* Alamofire */; };
-		C5C774EA2624C266007D1281 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C774E92624C266007D1281 /* VideoModel.swift */; };
+		C5C774EA2624C266007D1281 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C774E92624C266007D1281 /* Video.swift */; };
+		C5C775292629DA0E007D1281 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = C5C775282629DA0E007D1281 /* Nuke */; };
+		C5C7752C2629DD45007D1281 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7752B2629DD45007D1281 /* Channel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +32,8 @@
 		C50FEF64260E4A8D0033E0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5C774BD261F4DF8007D1281 /* VideoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5C774C126204FF1007D1281 /* VideoListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListCollectionViewCell.xib; sourceTree = "<group>"; };
-		C5C774E92624C266007D1281 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		C5C774E92624C266007D1281 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		C5C7752B2629DD45007D1281 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C774E72624C0E0007D1281 /* Alamofire in Frameworks */,
+				C5C775292629DA0E007D1281 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +101,8 @@
 			children = (
 				C50FEF5A260E4A8C0033E0E7 /* ViewController.swift */,
 				C50FEF5C260E4A8C0033E0E7 /* Main.storyboard */,
-				C5C774E92624C266007D1281 /* VideoModel.swift */,
+				C5C774E92624C266007D1281 /* Video.swift */,
+				C5C7752B2629DD45007D1281 /* Channel.swift */,
 			);
 			path = VideoList;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			name = youtube;
 			packageProductDependencies = (
 				C5C774E62624C0E0007D1281 /* Alamofire */,
+				C5C775282629DA0E007D1281 /* Nuke */,
 			);
 			productName = youtube;
 			productReference = C50FEF53260E4A8C0033E0E7 /* youtube.app */;
@@ -150,6 +156,7 @@
 			mainGroup = C50FEF4A260E4A8C0033E0E7;
 			packageReferences = (
 				C5C774E52624C0E0007D1281 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C5C775272629DA0E007D1281 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = C50FEF54260E4A8C0033E0E7 /* Products */;
 			projectDirPath = "";
@@ -180,9 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C50FEF5B260E4A8C0033E0E7 /* ViewController.swift in Sources */,
+				C5C7752C2629DD45007D1281 /* Channel.swift in Sources */,
 				C50FEF57260E4A8C0033E0E7 /* AppDelegate.swift in Sources */,
 				C5C774BE261F4DF8007D1281 /* VideoListCollectionViewCell.swift in Sources */,
-				C5C774EA2624C266007D1281 /* VideoModel.swift in Sources */,
+				C5C774EA2624C266007D1281 /* Video.swift in Sources */,
 				C50FEF59260E4A8C0033E0E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +403,14 @@
 				minimumVersion = 5.4.2;
 			};
 		};
+		C5C775272629DA0E007D1281 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -402,6 +418,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C5C774E52624C0E0007D1281 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C5C775282629DA0E007D1281 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5C775272629DA0E007D1281 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

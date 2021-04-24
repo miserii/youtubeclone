@@ -7,19 +7,21 @@
 
 import Foundation
 
-class VideoModel: Decodable {
+struct Video: Decodable {
 
     let kind: String
     let items: [Item]
+
 }
 
-class Item: Decodable {
+struct Item: Decodable {
 
+    var channel: Channel?
     let snippet: Snippet
 
 }
 
-class Snippet: Decodable {
+struct Snippet: Decodable {
 
     let publishedAt: String
     let channelId: String
@@ -29,14 +31,14 @@ class Snippet: Decodable {
 
 }
 
-class Thumbnail: Decodable {
+struct Thumbnail: Decodable {
 
     let medium: ThumbnailInfo
     let high: ThumbnailInfo
 
 }
 
-class ThumbnailInfo: Decodable {
+struct ThumbnailInfo: Decodable {
 
     let url: String
     let width: Int?
